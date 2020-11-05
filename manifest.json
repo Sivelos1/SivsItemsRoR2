@@ -3,8 +3,5 @@
     "version_number": "0.0.1",
     "website_url": "https://github.com/Sivelos1/SivsItemsRoR2",
     "description": "Adds a variety of items.",
-    "dependencies": [
-        "tristanmcpherson-R2API-2.5.14",
-	    "bbepis-BepInExPack-5.3.1"
-    ]
+    "dependencies": []
 }
