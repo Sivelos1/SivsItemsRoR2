@@ -5,6 +5,6 @@
     "description": "Adds a variety of items.",
     "dependencies": [
         "tristanmcpherson-R2API-2.5.14",
-	"bbepis-BepInExPack-5.3.1",
+	    "bbepis-BepInExPack-5.3.1"
     ]
 }
