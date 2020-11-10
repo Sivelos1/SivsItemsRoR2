@@ -23,6 +23,7 @@
 Changes marked with "-" are general balance changes. Changes marked with "*" are bugfixes.
 ```
 Version 0.0.2
+- Added changelog
 - Stacking Null Seed no longer increases AOE radius
 - Rebalanced Mourning Geode to make it worth its rarity; Mourning Geode was initially designed as a standard White item, and had the stats to match. I felt that since it's a bit harder to get now, it deserved a bit more punch.
      - Initial Buff Duration: 1 second -> 1.5 seconds
