@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "66JhgzNxbjzskuC3J1TUXhlSg5Z7m2rdjv1e3Gxe0inEi1Mul2bGX6A1I3OLMFgjyeNPoLZ9/uksDBAN5vUCdg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\devin\\source\\repos\\SivsItemsRoR2\\SivsItemsRoR2\\SivsItemsRoR2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\devin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\devin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

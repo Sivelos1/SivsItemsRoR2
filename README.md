@@ -13,6 +13,8 @@
 
 > Abandoned Wisp (Lesser Wisp): Summon a Little Wisp on kill.
 
+> Scale Mail (Lemurian): Gain temporary armor when entering combat.
+
 > Frayed Tentacle (Jellyfish): Chance on hit to tether yourself to an enemy, dealing damage over time.
 
 > Mourning Geode (Stone Golem): Gain a burst of armor and regen on kill.
@@ -21,6 +23,8 @@
 
 > Frenzied Tarbine (Clay Templar): Striking enemies rapidly also hits them with a barrage of Tar bullets.
 
+> Chitin Hammer (Beetle Guard): Dropping from a great enough height damages nearby enemies on impact.
+
 > Bighorn Buckler (Bighorn Bison): Damage enemies by dashing into them.
 
 > Living Furnace (Elder Lemurian): Chance on hit to ignite enemies.
@@ -28,8 +32,36 @@
 > Null Seed (Void Reaver): Annihilate all nearby characters on kill. Recharges after 30 seconds.
 
 ## Change Log
-Changes marked with "-" are general balance changes. Changes marked with "*" are bugfixes.
 ```
+Version 0.1.0
+- Now updated to work with the anniversary update!
+- Item displays are broken right now.
+- Added two new enemy items:
+	- Scale Mail, drops from Lemurians
+	- Chitin Hammer, drops from Beetle Guards
+- Frenzied Tarbine:
+	- Follow-up duration is now affected by proc coefficients. Basically, the smaller your proc coefficient is, the less time you have 
+	to proc Tarbine.
+- Imp's Eye:
+	- Now provides an invisible bleed chance.
+
+
+Version 0.0.7
+- Properly invokes Language API, allowing for the mod to function on its own
+- Frayed Tentacle*:
+	- Tethers now adhere to the tether radius and break if their owner goes too far from the target.
+	- Tethers no longer linger on dead targets.
+	- Tick Rate: 0.1 -> 0.25
+	- Tether Radius: 200 -> 65; Frayed Tentacles tethers were never meant to be a long-ranged source of damage. As
+	such, theyve been adjusted to something a bit more reasonable - more like Tesla Coils AOE radius.
+* Some of these changes may not come into effect, due to the config files created by this mod. Remember to reset the 
+values in your config if you want the latest balance changes!
+
+Version 0.0.6
+- Fixed Void Fields not spawning any items upon completing a round
+- Fixed Mourning Geode raising exceptions on kill
+- Adjusted position of Bighorn Buckler's hitbox so larger characters like Acrid can use it
+
 Version 0.0.5
 - Added configuration files
 	- With the config, you can now edit variables for almost everything in the mod. Namely, enemy item drop rates!
