@@ -39,6 +39,7 @@ namespace SivsItemsRoR2
             ReadWriteConfig();
             RegisterEffects();
             RegisterLanguageTokens();
+            RegisterItemDisplayRules();
             RegisterEquipment();
             Hooks();
         }
@@ -65,154 +66,224 @@ namespace SivsItemsRoR2
             equipDef.isLunar = false;
             equipDef.canDrop = true;
             equipDef.enigmaCompatible = true;
-            SivsItems_ContentPack.equipmentDefs.Add(equipDef);
-            ItemDisplayRuleDict idrs = new ItemDisplayRuleDict(new ItemDisplayRule[]
-            {
-                /*new ItemDisplayRule
-                {
-                    childName = "Root",
-                    ruleType = ItemDisplayRuleType.ParentedPrefab,
-                    followerPrefab = displayPrefab,
-                    localAngles = new Vector3(0f, 0f, 0f),
-                    localPos = new Vector3(0f, 2.5f, 0f),
-                    localScale = Vector3.one
-                }*/
-            });/*
-            idrs.Add("mdlHuntress", new ItemDisplayRule[]
-            {
-                new ItemDisplayRule
-                {
-                    childName = "Base",
-                    ruleType = ItemDisplayRuleType.ParentedPrefab,
-                    followerPrefab = displayPrefab,
-                    localAngles = new Vector3(0f, 0f, 0f),
-                    localPos = new Vector3(1f, 1f, 0f),
-                    localScale = Vector3.one
-                }
-            });
-            idrs.Add("mdlToolbot", new ItemDisplayRule[]
-            {
-                new ItemDisplayRule
-                {
-                    childName = "Base",
-                    ruleType = ItemDisplayRuleType.ParentedPrefab,
-                    followerPrefab = displayPrefab,
-                    localAngles = new Vector3(0f, 0f, 0f),
-                    localPos = new Vector3(1f, 1f, 0f),
-                    localScale = Vector3.one
-                }
-            });
-            idrs.Add("mdlMage", new ItemDisplayRule[]
-            {
-                new ItemDisplayRule
-                {
-                    childName = "Base",
-                    ruleType = ItemDisplayRuleType.ParentedPrefab,
-                    followerPrefab = displayPrefab,
-                    localAngles = new Vector3(0f, 0f, 0f),
-                    localPos = new Vector3(1f, 1f, 0f),
-                    localScale = Vector3.one
-                }
-            });
-            idrs.Add("mdlCroco", new ItemDisplayRule[]
-            {
-                new ItemDisplayRule
-                {
-                    childName = "Base",
-                    ruleType = ItemDisplayRuleType.ParentedPrefab,
-                    followerPrefab = displayPrefab,
-                    localAngles = new Vector3(0f, 0f, 0f),
-                    localPos = new Vector3(1f, 1f, 0f),
-                    localScale = Vector3.one
-                }
-            });
-            idrs.Add("mdlEngi", new ItemDisplayRule[]
-            {
-                new ItemDisplayRule
-                {
-                    childName = "Base",
-                    ruleType = ItemDisplayRuleType.ParentedPrefab,
-                    followerPrefab = displayPrefab,
-                    localAngles = new Vector3(0f, 0f, 0f),
-                    localPos = new Vector3(1f, 1f, 0f),
-                    localScale = Vector3.one
-                }
-            });
-            idrs.Add("mdlEngiTurret", new ItemDisplayRule[]
-            {
-                new ItemDisplayRule
-                {
-                    childName = "Base",
-                    ruleType = ItemDisplayRuleType.ParentedPrefab,
-                    followerPrefab = displayPrefab,
-                    localAngles = new Vector3(0f, 0f, 0f),
-                    localPos = new Vector3(1f, 1f, 0f),
-                    localScale = Vector3.one
-                }
-            });
-            idrs.Add("mdlMerc", new ItemDisplayRule[]
-            {
-                new ItemDisplayRule
-                {
-                    childName = "Base",
-                    ruleType = ItemDisplayRuleType.ParentedPrefab,
-                    followerPrefab = displayPrefab,
-                    localAngles = new Vector3(0f, 0f, 0f),
-                    localPos = new Vector3(1f, 1f, 0f),
-                    localScale = Vector3.one
-                }
-            });
-            idrs.Add("mdlTreebot", new ItemDisplayRule[]
-            {
-                new ItemDisplayRule
-                {
-                    childName = "Base",
-                    ruleType = ItemDisplayRuleType.ParentedPrefab,
-                    followerPrefab = displayPrefab,
-                    localAngles = new Vector3(0f, 0f, 0f),
-                    localPos = new Vector3(1f, 1f, 0f),
-                    localScale = Vector3.one
-                }
-            });
-            idrs.Add("mdlCaptain", new ItemDisplayRule[]
-            {
-                new ItemDisplayRule
-                {
-                    childName = "Base",
-                    ruleType = ItemDisplayRuleType.ParentedPrefab,
-                    followerPrefab = displayPrefab,
-                    localAngles = new Vector3(0f, 0f, 0f),
-                    localPos = new Vector3(1f, 1f, 0f),
-                    localScale = Vector3.one
-                }
-            });
-            idrs.Add("mdlLoader", new ItemDisplayRule[]
-            {
-                new ItemDisplayRule
-                {
-                    childName = "Base",
-                    ruleType = ItemDisplayRuleType.ParentedPrefab,
-                    followerPrefab = displayPrefab,
-                    localAngles = new Vector3(0f, 0f, 0f),
-                    localPos = new Vector3(1f, 1f, 0f),
-                    localScale = Vector3.one
-                }
-            });
-            idrs.Add("mdlScav", new ItemDisplayRule[]
-            {
-                new ItemDisplayRule
-                {
-                    childName = "Base",
-                    ruleType = ItemDisplayRuleType.ParentedPrefab,
-                    followerPrefab = displayPrefab,
-                    localAngles = new Vector3(0f, 0f, 0f),
-                    localPos = new Vector3(1f, 1f, 0f),
-                    localScale = Vector3.one
-                }
-            });*/
             SivsItemsPlugin.allEquipDefs.Add(equipDef);
         }
         
+        private static void RegisterItemDisplayRules()
+        {
+            Dictionary<string, ItemDisplayRuleSet> vitalIdrs = ItemDisplays.GetVitalBodiesIDRS();
+            ItemDisplays.AddEquipDisplayToIDRS(vitalIdrs["CommandoBody"], equipDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[]
+                {
+                    new ItemDisplayRule
+                    {
+                        childName = "Base",
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        localAngles = new Vector3(0f, 0f, 0f),
+                        localPos = new Vector3(0f, 0f, 0f),
+                        localScale = Vector3.one * 1f
+                    }
+                }
+            });
+            ItemDisplays.AddEquipDisplayToIDRS(vitalIdrs["HuntressBody"], equipDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[]
+                {
+                    new ItemDisplayRule
+                    {
+                        childName = "Base",
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        localAngles = new Vector3(0f, 0f, 0f),
+                        localPos = new Vector3(0f, 0f, 0f),
+                        localScale = Vector3.one * 1f
+                    }
+                }
+            });
+            ItemDisplays.AddEquipDisplayToIDRS(vitalIdrs["Bandit2Body"], equipDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[]
+                {
+                    new ItemDisplayRule
+                    {
+                        childName = "Base",
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        localAngles = new Vector3(0f, 0f, 0f),
+                        localPos = new Vector3(0f, 0f, 0f),
+                        localScale = Vector3.one * 1f
+                    }
+                }
+            });
+            ItemDisplays.AddEquipDisplayToIDRS(vitalIdrs["ToolbotBody"], equipDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[]
+                {
+                    new ItemDisplayRule
+                    {
+                        childName = "Base",
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        localAngles = new Vector3(0f, 0f, 0f),
+                        localPos = new Vector3(0f, 0f, 0f),
+                        localScale = Vector3.one * 1f
+                    }
+                }
+            });
+            ItemDisplays.AddEquipDisplayToIDRS(vitalIdrs["MageBody"], equipDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[]
+                {
+                    new ItemDisplayRule
+                    {
+                        childName = "Base",
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        localAngles = new Vector3(0f, 0f, 0f),
+                        localPos = new Vector3(0f, 0f, 0f),
+                        localScale = Vector3.one * 1f
+                    }
+                }
+            });
+            ItemDisplays.AddEquipDisplayToIDRS(vitalIdrs["TreebotBody"], equipDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[]
+                {
+                    new ItemDisplayRule
+                    {
+                        childName = "Base",
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        localAngles = new Vector3(0f, 0f, 0f),
+                        localPos = new Vector3(0f, 0f, 0f),
+                        localScale = Vector3.one * 1f
+                    }
+                }
+            });
+            ItemDisplays.AddEquipDisplayToIDRS(vitalIdrs["LoaderBody"], equipDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[]
+                {
+                    new ItemDisplayRule
+                    {
+                        childName = "Base",
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        localAngles = new Vector3(0f, 0f, 0f),
+                        localPos = new Vector3(0f, 0f, 0f),
+                        localScale = Vector3.one * 1f
+                    }
+                }
+            });
+            ItemDisplays.AddEquipDisplayToIDRS(vitalIdrs["MercBody"], equipDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[]
+                {
+                    new ItemDisplayRule
+                    {
+                        childName = "Base",
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        localAngles = new Vector3(0f, 0f, 0f),
+                        localPos = new Vector3(0f, 0f, 0f),
+                        localScale = Vector3.one * 1f
+                    }
+                }
+            });
+            ItemDisplays.AddEquipDisplayToIDRS(vitalIdrs["CaptainBody"], equipDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[]
+                {
+                    new ItemDisplayRule
+                    {
+                        childName = "Base",
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        localAngles = new Vector3(0f, 0f, 0f),
+                        localPos = new Vector3(0f, 0f, 0f),
+                        localScale = Vector3.one * 1f
+                    }
+                }
+            });
+            ItemDisplays.AddEquipDisplayToIDRS(vitalIdrs["CrocoBody"], equipDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[]
+                {
+                    new ItemDisplayRule
+                    {
+                        childName = "Base",
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        localAngles = new Vector3(0f, 0f, 0f),
+                        localPos = new Vector3(0f, 0f, 0f),
+                        localScale = Vector3.one * 1f
+                    }
+                }
+            });
+            ItemDisplays.AddEquipDisplayToIDRS(vitalIdrs["EngiBody"], equipDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[]
+                {
+                    new ItemDisplayRule
+                    {
+                        childName = "Base",
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        localAngles = new Vector3(0f, 0f, 0f),
+                        localPos = new Vector3(0f, 0f, 0f),
+                        localScale = Vector3.one * 1f
+                    }
+                }
+            });
+            ItemDisplays.AddEquipDisplayToIDRS(vitalIdrs["EngiTurretBody"], equipDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[]
+                {
+                    new ItemDisplayRule
+                    {
+                        childName = "Base",
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        localAngles = new Vector3(0f, 0f, 0f),
+                        localPos = new Vector3(0f, 0f, 0f),
+                        localScale = Vector3.one * 1f
+                    }
+                }
+            });
+            ItemDisplays.AddEquipDisplayToIDRS(vitalIdrs["EquipmentDroneBody"], equipDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[]
+                {
+                    new ItemDisplayRule
+                    {
+                        childName = "Base",
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        localAngles = new Vector3(0f, 0f, 0f),
+                        localPos = new Vector3(0f, 0f, 0f),
+                        localScale = Vector3.one * 1f
+                    }
+                }
+            });
+            ItemDisplays.AddEquipDisplayToIDRS(vitalIdrs["ScavBody"], equipDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[]
+                {
+                    new ItemDisplayRule
+                    {
+                        childName = "Base",
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        localAngles = new Vector3(0f, 0f, 0f),
+                        localPos = new Vector3(0f, 0f, 0f),
+                        localScale = Vector3.one * 1f
+                    }
+                }
+            });
+        }
+
         private static void RegisterEffects()
         {
             shieldUpDef = new EffectDef

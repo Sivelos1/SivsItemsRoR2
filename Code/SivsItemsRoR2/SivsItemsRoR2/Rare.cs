@@ -66,18 +66,6 @@ namespace SivsItemsRoR2
             itemDef.tags = new ItemTag[] { ItemTag.Scrap };
             itemDef.canRemove = true;
             itemDef.tier = ItemTier.Tier3;
-            ItemDisplayRuleDict idrs = new ItemDisplayRuleDict(new ItemDisplayRule[]
-            {
-                /*new ItemDisplayRule
-                {
-                    childName = "Root",
-                    ruleType = ItemDisplayRuleType.ParentedPrefab,
-                    followerPrefab = displayPrefab,
-                    localAngles = new Vector3(0f, 0f, 0f),
-                    localPos = new Vector3(0f, 2.5f, 0f),
-                    localScale = Vector3.one
-                }*/
-            });
             SivsItemsPlugin.allItemDefs.Add(itemDef);
         }
 

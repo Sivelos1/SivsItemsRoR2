@@ -5,6 +5,14 @@
 
 > Know Thy Enemy: Enemies with the same elite affix as you take massive damage.
 
+## Lunar Items
+
+> Wheel of Agony: Sacrifice HP on hit to gain a stack of Agony. Gaining enough stacks of Agony creates a blast for massive damage.
+
+## Equipment
+
+> Guardian's Pacemaker: Recharge your shields on use.
+
  
 ## Enemy Items
  Enemy items are special yellow items that have a chance to drop from various monsters. Think of them as boss items but for individual enemies.
@@ -13,7 +21,7 @@
 
 > Abandoned Wisp (Lesser Wisp): Summon a Little Wisp on kill.
 
-> Scale Mail (Lemurian): Gain temporary armor when entering combat.
+> Scale Mail (Lemurian): Gain a stacking armor boost when hit.
 
 > Frayed Tentacle (Jellyfish): Chance on hit to tether yourself to an enemy, dealing damage over time.
 
@@ -29,10 +37,55 @@
 
 > Living Furnace (Elder Lemurian): Chance on hit to ignite enemies.
 
+> The Second Stage (Parent): Enter a fury when an ally is killed.
+
 > Null Seed (Void Reaver): Annihilate all nearby characters on kill. Recharges after 30 seconds.
 
 ## Change Log
 ```
+Version 0.1.5
+- Wheel of Agony:
+	- HP deduction no longer procs on-damage items, like Razorwire
+		- Apparently Wheel of Agony had a neat little interaction with Razorwire where it would create an infinite damage loop.
+		Normally I'd be all about that, but it can quickly cause crashes the more procs you have, so unfortunately I had to
+		axe it - and by extension ALL on-damage items from Wheel of Agonys interactions.
+- Enemies now drop items again! Hurray.
+
+Version 0.1.3 (and 0.1.4)
+- Wheel of Agony no longer causes null reference exceptions
+- Void Fields no longer fails to spawn reward items
+- Living Furnace now actually deals damage over time, rather than just applying a debuff that does nothing
+- Chitin Hammer now reduces fall damage independently of fall speed
+	- Originally, Chitin Hammer only reduced fall speed if you were falling at its activation speed - yet, for some reason, this was
+	woefully inconsistent compared to its attack, so now it ALWAYS reduces fall damage.
+- Abandoned Wisp:
+	- Summon Limit: 1 (+1 per stack) => Infinite
+	- Little Wisps now can be summoned ad infinitum, with the side effect of only lasting 15 seconds before perishing.
+	- Little Wisps gain 100% (+100% per stack) damage and health.
+- New(?) Equipment:
+	- Guardian's Pacemaker
+		- I think this may have been in past updates, but it broke the mod at one point, so I had to remove it. Thankfully, that is no
+		longer the case.
+- New Lunar item:
+	- Wheel of Agony
+
+Version 0.1.2 (and 0.1.1)
+- I'm aware of the Void Fields bug, as well as the Command bug; this version cleaned up some Project References, so HOPEFULLY that helps with one
+of the two.
+- Mod doesn't attempt to register removed / incomplete content as droppable (lol oops)
+- Added new enemy item:
+	- The Second Stage, drops from Parents (technically this was in the last update I just forgot to mention lool)
+- The Second Stage:
+	- Icon now properly matches item
+	- Visual effects cleaned up
+- Scale Mail:
+	- Now grants a stacking buff to armor on hit.
+	- Buff Length: 2s (+1s per stack) -> 2s (+2s per stack)
+	- Armor Boost: 10 (+5 per stack) -> 5 (+5 per stack)
+- Chitin Hammer:
+	- Now properly updates the blast attack
+
+
 Version 0.1.0
 - Now updated to work with the anniversary update!
 - Item displays are broken right now.

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\devin\\source\\repos\\SivsItemsRoR2\\SivsItemsRoR2\\SivsItemsRoR2.csproj": {}
+    "C:\\Users\\devin\\OneDrive\\Documents\\RoR2 Mod Builds\\SivsItemsRoR2\\Code\\SivsItemsRoR2\\SivsItemsRoR2\\SivsItemsRoR2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\devin\\source\\repos\\SivsItemsRoR2\\SivsItemsRoR2\\SivsItemsRoR2.csproj": {
+    "C:\\Users\\devin\\OneDrive\\Documents\\RoR2 Mod Builds\\SivsItemsRoR2\\Code\\SivsItemsRoR2\\SivsItemsRoR2\\SivsItemsRoR2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\devin\\source\\repos\\SivsItemsRoR2\\SivsItemsRoR2\\SivsItemsRoR2.csproj",
+        "projectUniqueName": "C:\\Users\\devin\\OneDrive\\Documents\\RoR2 Mod Builds\\SivsItemsRoR2\\Code\\SivsItemsRoR2\\SivsItemsRoR2\\SivsItemsRoR2.csproj",
         "projectName": "SivsItemsRoR2",
-        "projectPath": "C:\\Users\\devin\\source\\repos\\SivsItemsRoR2\\SivsItemsRoR2\\SivsItemsRoR2.csproj",
+        "projectPath": "C:\\Users\\devin\\OneDrive\\Documents\\RoR2 Mod Builds\\SivsItemsRoR2\\Code\\SivsItemsRoR2\\SivsItemsRoR2\\SivsItemsRoR2.csproj",
         "packagesPath": "C:\\Users\\devin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\devin\\source\\repos\\SivsItemsRoR2\\SivsItemsRoR2\\obj\\",
+        "outputPath": "C:\\Users\\devin\\OneDrive\\Documents\\RoR2 Mod Builds\\SivsItemsRoR2\\Code\\SivsItemsRoR2\\SivsItemsRoR2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\devin\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -101,3 +101,12 @@ C:\Users\devin\source\repos\SivsItemsRoR2\SivsItemsRoR2\obj\Debug\netstandard2.0
 C:\Program Files (x86)\Steam\steamapps\common\Risk of Rain 2\BepInEx\plugins\netstandard2.0\SivsItemsRoR2.deps.json
 C:\Program Files (x86)\Steam\steamapps\common\Risk of Rain 2\BepInEx\plugins\netstandard2.0\SivsItemsRoR2.dll
 C:\Program Files (x86)\Steam\steamapps\common\Risk of Rain 2\BepInEx\plugins\netstandard2.0\SivsItemsRoR2.pdb
+C:\Users\devin\OneDrive\Documents\RoR2 Mod Builds\SivsItemsRoR2\Code\SivsItemsRoR2\SivsItemsRoR2\obj\Debug\netstandard2.0\SivsItemsRoR2.csprojAssemblyReference.cache
+C:\Users\devin\OneDrive\Documents\RoR2 Mod Builds\SivsItemsRoR2\Code\SivsItemsRoR2\SivsItemsRoR2\obj\Debug\netstandard2.0\SivsItemsRoR2.Properties.Resources.resources
+C:\Users\devin\OneDrive\Documents\RoR2 Mod Builds\SivsItemsRoR2\Code\SivsItemsRoR2\SivsItemsRoR2\obj\Debug\netstandard2.0\SivsItemsRoR2.csproj.GenerateResource.cache
+C:\Users\devin\OneDrive\Documents\RoR2 Mod Builds\SivsItemsRoR2\Code\SivsItemsRoR2\SivsItemsRoR2\obj\Debug\netstandard2.0\SivsItemsRoR2.AssemblyInfoInputs.cache
+C:\Users\devin\OneDrive\Documents\RoR2 Mod Builds\SivsItemsRoR2\Code\SivsItemsRoR2\SivsItemsRoR2\obj\Debug\netstandard2.0\SivsItemsRoR2.AssemblyInfo.cs
+C:\Users\devin\OneDrive\Documents\RoR2 Mod Builds\SivsItemsRoR2\Code\SivsItemsRoR2\SivsItemsRoR2\obj\Debug\netstandard2.0\SivsItemsRoR2.csproj.CoreCompileInputs.cache
+C:\Users\devin\OneDrive\Documents\RoR2 Mod Builds\SivsItemsRoR2\Code\SivsItemsRoR2\SivsItemsRoR2\obj\Debug\netstandard2.0\SivsItemsRoR2.csproj.CopyComplete
+C:\Users\devin\OneDrive\Documents\RoR2 Mod Builds\SivsItemsRoR2\Code\SivsItemsRoR2\SivsItemsRoR2\obj\Debug\netstandard2.0\SivsItemsRoR2.dll
+C:\Users\devin\OneDrive\Documents\RoR2 Mod Builds\SivsItemsRoR2\Code\SivsItemsRoR2\SivsItemsRoR2\obj\Debug\netstandard2.0\SivsItemsRoR2.pdb

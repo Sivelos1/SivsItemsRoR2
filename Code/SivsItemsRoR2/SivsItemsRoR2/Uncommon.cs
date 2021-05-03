@@ -45,6 +45,7 @@ namespace SivsItemsRoR2
             RegisterEffects();
             RegisterLanguageTokens();
             RegisterItem();
+            RegisterItemDisplayRules();
             Hooks();
         }
 
@@ -71,21 +72,207 @@ namespace SivsItemsRoR2
             itemDef.tags = new ItemTag[] { ItemTag.Damage };
             itemDef.canRemove = true;
             itemDef.tier = ItemTier.Tier2;
-            ItemDisplayRuleDict idrs = new ItemDisplayRuleDict(new ItemDisplayRule[]
-            {
-                new ItemDisplayRule
-                {
-                    childName = "Root",
-                    ruleType = ItemDisplayRuleType.ParentedPrefab,
-                    followerPrefab = displayPrefab,
-                    localAngles = new Vector3(0f, 0f, 0f),
-                    localPos = new Vector3(0f, 2.5f, 0f),
-                    localScale = Vector3.one
-                }
-            });
             SivsItemsPlugin.allItemDefs.Add(itemDef);
         }
-
+        private static void RegisterItemDisplayRules()
+        {
+            Dictionary<string, ItemDisplayRuleSet> vitalIdrs = ItemDisplays.GetVitalBodiesIDRS();
+            ItemDisplays.AddItemDisplayToIDRS(vitalIdrs["CommandoBody"], itemDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[1]
+                {
+                    new ItemDisplayRule
+                    {
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        childName = "Base",
+localPos = new Vector3(0F, 0F, -1.1529F),
+localAngles = new Vector3(90F, 0F, 0F),
+localScale = new Vector3(1F, 1F, 1F)
+                    }
+                }
+            });
+            ItemDisplays.AddItemDisplayToIDRS(vitalIdrs["HuntressBody"], itemDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[1]
+                {
+                    new ItemDisplayRule
+                    {
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        childName = "Base",
+localPos = new Vector3(0F, 0F, -1.1529F),
+localAngles = new Vector3(90F, 0F, 0F),
+localScale = new Vector3(1F, 1F, 1F)
+                    }
+                }
+            });
+            ItemDisplays.AddItemDisplayToIDRS(vitalIdrs["Bandit2Body"], itemDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[1]
+                {
+                    new ItemDisplayRule
+                    {
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        childName = "Base",
+localPos = new Vector3(0F, 0F, -1.1529F),
+localAngles = new Vector3(90F, 0F, 0F),
+localScale = new Vector3(1F, 1F, 1F)
+                    }
+                }
+            });
+            ItemDisplays.AddItemDisplayToIDRS(vitalIdrs["ToolbotBody"], itemDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[1]
+                {
+                    new ItemDisplayRule
+                    {
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        childName = "Base",
+localPos = new Vector3(0F, 0F, -1.1529F),
+localAngles = new Vector3(90F, 0F, 0F),
+localScale = new Vector3(1F, 1F, 1F)
+                    }
+                }
+            });
+            ItemDisplays.AddItemDisplayToIDRS(vitalIdrs["MageBody"], itemDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[1]
+                {
+                    new ItemDisplayRule
+                    {
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        childName = "Base",
+localPos = new Vector3(0F, 0F, -1.1529F),
+localAngles = new Vector3(90F, 0F, 0F),
+localScale = new Vector3(1F, 1F, 1F)
+                    }
+                }
+            });
+            ItemDisplays.AddItemDisplayToIDRS(vitalIdrs["TreebotBody"], itemDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[1]
+                {
+                    new ItemDisplayRule
+                    {
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        childName = "Base",
+localPos = new Vector3(0F, 0F, -1.1529F),
+localAngles = new Vector3(90F, 0F, 0F),
+localScale = new Vector3(1F, 1F, 1F)
+                    }
+                }
+            });
+            ItemDisplays.AddItemDisplayToIDRS(vitalIdrs["LoaderBody"], itemDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[1]
+                {
+                    new ItemDisplayRule
+                    {
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        childName = "Base",
+localPos = new Vector3(0F, 0F, -1.1529F),
+localAngles = new Vector3(90F, 0F, 0F),
+localScale = new Vector3(1F, 1F, 1F)
+                    }
+                }
+            });
+            ItemDisplays.AddItemDisplayToIDRS(vitalIdrs["MercBody"], itemDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[1]
+                {
+                    new ItemDisplayRule
+                    {
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        childName = "Base",
+localPos = new Vector3(0F, 0F, -1.1529F),
+localAngles = new Vector3(90F, 0F, 0F),
+localScale = new Vector3(1F, 1F, 1F)
+                    }
+                }
+            });
+            ItemDisplays.AddItemDisplayToIDRS(vitalIdrs["CaptainBody"], itemDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[1]
+                {
+                    new ItemDisplayRule
+                    {
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        childName = "Base",
+localPos = new Vector3(0F, 0F, -1.1529F),
+localAngles = new Vector3(90F, 0F, 0F),
+localScale = new Vector3(1F, 1F, 1F)
+                    }
+                }
+            });
+            ItemDisplays.AddItemDisplayToIDRS(vitalIdrs["CrocoBody"], itemDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[1]
+                {
+                    new ItemDisplayRule
+                    {
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        childName = "Base",
+localPos = new Vector3(0F, 0F, -1.1529F),
+localAngles = new Vector3(90F, 0F, 0F),
+localScale = new Vector3(1F, 1F, 1F)
+                    }
+                }
+            });
+            ItemDisplays.AddItemDisplayToIDRS(vitalIdrs["EngiBody"], itemDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[1]
+                {
+                    new ItemDisplayRule
+                    {
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        childName = "Base",
+localPos = new Vector3(0F, 0F, -1.1529F),
+localAngles = new Vector3(90F, 0F, 0F),
+localScale = new Vector3(1F, 1F, 1F)
+                    }
+                }
+            });
+            ItemDisplays.AddItemDisplayToIDRS(vitalIdrs["EngiTurretBody"], itemDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[1]
+                {
+                    new ItemDisplayRule
+                    {
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        childName = "Base",
+localPos = new Vector3(0F, 0F, -1.1529F),
+localAngles = new Vector3(90F, 0F, 0F),
+localScale = new Vector3(1F, 1F, 1F)
+                    }
+                }
+            });
+            ItemDisplays.AddItemDisplayToIDRS(vitalIdrs["ScavBody"], itemDef, new DisplayRuleGroup
+            {
+                rules = new ItemDisplayRule[1]
+                {
+                    new ItemDisplayRule
+                    {
+                        ruleType = ItemDisplayRuleType.ParentedPrefab,
+                        followerPrefab = displayPrefab,
+                        childName = "Base",
+localPos = new Vector3(0F, 0F, -1.1529F),
+localAngles = new Vector3(90F, 0F, 0F),
+localScale = new Vector3(1F, 1F, 1F)
+                    }
+                }
+            });
+        }
         private static void RegisterEffects()
         {
             hitEffectDef = new EffectDef
@@ -109,32 +296,36 @@ namespace SivsItemsRoR2
                 orig.Invoke(self, damageReport);
                 if(damageReport != null)
                 {
-                    if (damageReport.attacker)
+                    if (damageReport.attacker != null)
                     {
-                        if (damageReport.attackerBody)
+                        if (damageReport.attackerBody != null)
                         {
-                            if (damageReport.attackerBody.inventory.GetItemCount(itemDef) > 0)
+                            if(damageReport.attackerBody.inventory != null)
                             {
-                                if (damageReport.victim)
+                                if (damageReport.attackerBody.inventory.GetItemCount(itemDef) > 0)
                                 {
-                                    if (damageReport.victimIsElite)
+                                    if (damageReport.victim != null)
                                     {
-                                        float duration = stealDuration.Value;
-                                        for (int k = 0; k < BuffCatalog.eliteBuffIndices.Length; k++)
+                                        if (damageReport.victimIsElite)
                                         {
-                                            BuffIndex buffType = BuffCatalog.eliteBuffIndices[k];
-                                            if (damageReport.victimBody.HasBuff(buffType))
+                                            float duration = stealDuration.Value;
+                                            for (int k = 0; k < BuffCatalog.eliteBuffIndices.Length; k++)
                                             {
-                                                float chance = baseStealChance.Value + (stackStealChance.Value * (damageReport.attackerBody.inventory.GetItemCount(itemDef) - 1));
-                                                if (Util.CheckRoll(chance, damageReport.attackerMaster))
+                                                BuffIndex buffType = BuffCatalog.eliteBuffIndices[k];
+                                                if (damageReport.victimBody.HasBuff(buffType))
                                                 {
-                                                    damageReport.attackerBody.AddTimedBuff(buffType, duration);
+                                                    float chance = baseStealChance.Value + (stackStealChance.Value * (damageReport.attackerBody.inventory.GetItemCount(itemDef) - 1));
+                                                    if (Util.CheckRoll(chance, damageReport.attackerMaster))
+                                                    {
+                                                        damageReport.attackerBody.AddTimedBuff(buffType, duration);
+                                                    }
                                                 }
                                             }
                                         }
                                     }
                                 }
                             }
+                            
                         }
                     }
                 }
